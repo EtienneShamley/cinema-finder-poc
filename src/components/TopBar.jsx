@@ -1,7 +1,8 @@
-import { AppBar, Container, Toolbar, Typography } from '@mui/material';
-import { Link as RouterLink } from 'react-router-dom';
-import SiteLogo from './SiteLogo';
-import MapTypeMenu from './MapTypeMenu';
+import { AppBar, Container, Toolbar, Typography } from "@mui/material";
+import { Link as RouterLink } from "react-router-dom";
+import SiteLogo from "./SiteLogo";
+import MapTypeMenu from "./MapTypeMenu";
+import React from "react";
 
 const TopBar = () => (
   <AppBar position="static">
@@ -14,10 +15,10 @@ const TopBar = () => (
           component={RouterLink}
           to="/"
           sx={{
-            fontFamily: 'monospace',
+            fontFamily: "monospace",
             fontWeight: 700,
-            color: 'inherit',
-            textDecoration: 'none',
+            color: "inherit",
+            textDecoration: "none",
           }}
         >
           Cinema Finder

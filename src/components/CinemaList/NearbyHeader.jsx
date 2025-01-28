@@ -1,6 +1,13 @@
-import { IconButton, ListSubheader, Typography, Stack, Chip } from "@mui/material";
-import { MdOutlineArrowBack } from 'react-icons/md';
-import { Link as RouterLink } from 'react-router-dom';
+import {
+  IconButton,
+  ListSubheader,
+  Typography,
+  Stack,
+  Chip,
+} from "@mui/material";
+import { MdOutlineArrowBack } from "react-icons/md";
+import { Link as RouterLink } from "react-router-dom";
+import React from "react";
 
 const NearbyHeader = ({ cinemas }) => {
   return (
@@ -9,14 +16,12 @@ const NearbyHeader = ({ cinemas }) => {
         <IconButton component={RouterLink} to="/">
           <MdOutlineArrowBack />
         </IconButton>
-        <Typography sx={{ alignSelf: 'center', flex: 1, textAlign: 'center' }}>
+        <Typography sx={{ alignSelf: "center", flex: 1, textAlign: "center" }}>
           Nearby Cinemas
         </Typography>
-        {cinemas.length > 0 && (
-          <Chip label={cinemas.length} />
-        )}
+        {cinemas.length > 0 && <Chip label={cinemas.length} />}
       </Stack>
     </ListSubheader>
-  )
-}
+  );
+};
 export default NearbyHeader;

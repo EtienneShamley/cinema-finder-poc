@@ -1,10 +1,11 @@
+import React from "react";
 import { Grid, Paper, Typography } from "@mui/material";
 import Layout from "./components/Layout";
 import Map from "./components/Map";
 import AsideIndex from "./components/AsideIndex";
 import {
   FranchiseCinemasList,
-  NearbyCinemasList
+  NearbyCinemasList,
 } from "./components/CinemaList";
 import { Switch, Route } from "react-router-dom";
 import Provider from "./components/Provider";

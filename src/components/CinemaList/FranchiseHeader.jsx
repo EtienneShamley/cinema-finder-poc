@@ -1,9 +1,10 @@
 import { IconButton, ListSubheader, Typography, Stack } from "@mui/material";
 import { GiAustralia, GiFern } from "react-icons/gi";
-import { MdOutlineArrowBack } from 'react-icons/md';
-import { Link as RouterLink } from 'react-router-dom';
+import { MdOutlineArrowBack } from "react-icons/md";
+import { Link as RouterLink } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import franchises from "../../data/franchises";
+import React from "react";
 
 const FranchiseHeader = () => {
   const { franchiseId, countryCode } = useParams();
@@ -15,19 +16,27 @@ const FranchiseHeader = () => {
         <IconButton component={RouterLink} to="/">
           <MdOutlineArrowBack />
         </IconButton>
-        {franchise?.logoUrl ? (<div style={{ height: '3em' }}>
-          <img src={franchise?.logoUrl} alt={`${franchise.identifier} logo`} height="100%" />
-        </div>) : (
-          <Typography sx={{ alignSelf: 'center' }}>
-            {franchiseId === 'all-cinemas' ? 'All Cinemas' : (franchise?.name || franchise?.identifier || franchise?.id)}
+        {franchise?.logoUrl ? (
+          <div style={{ height: "3em" }}>
+            <img
+              src={franchise?.logoUrl}
+              alt={`${franchise.identifier} logo`}
+              height="100%"
+            />
+          </div>
+        ) : (
+          <Typography sx={{ alignSelf: "center" }}>
+            {franchiseId === "all-cinemas"
+              ? "All Cinemas"
+              : franchise?.name || franchise?.identifier || franchise?.id}
           </Typography>
         )}
         <IconButton disabled>
-          {countryCode === 'au' && <GiAustralia />}
-          {countryCode === 'nz' && <GiFern />}
+          {countryCode === "au" && <GiAustralia />}
+          {countryCode === "nz" && <GiFern />}
         </IconButton>
       </Stack>
     </ListSubheader>
-  )
-}
+  );
+};
 export default FranchiseHeader;

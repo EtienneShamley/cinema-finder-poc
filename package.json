@@ -16,18 +16,18 @@
     "d3-format": "^3.1.0",
     "leaflet": "^1.9.3",
     "lodash": "^4.17.21",
+    "mapbox-gl": "3.9.4",
     "maplibre-gl": "^2.4.0",
     "notistack": "^2.0.8",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-geolocated": "^4.0.3",
     "react-icons": "^4.7.1",
-    "react-leaflet": "^4.2.0",
+    "react-leaflet": "^5.0.0",
     "react-map-gl": "^7.0.21",
     "react-router-dom": "^5.3.4",
-    "react-scripts": "2.0.3",
-    "use-persisted-state": "^0.3.3",
-    "mapbox-gl": "3.9.4"
+    "react-scripts": "^5.0.1",
+    "use-persisted-state": "^0.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -55,7 +55,19 @@
       "last 1 safari version"
     ]
   },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      [
+        "@babel/preset-react",
+        {
+          "runtime": "automatic"
+        }
+      ]
+    ]
+  },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "cra-bundle-analyzer": "^0.1.1"
   }
 }
